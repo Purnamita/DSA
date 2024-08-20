@@ -34,10 +34,10 @@ class Solution {
 public:
     int minSumOfLengths(vector<int>& arr, int target) {
         int n = arr.size();
-        vector<int> min_len(n, INT_MAX); // min_len[i] stores the minimum length of a subarray ending at or before i
+        vector<int> min_len(n, INT_MAX); 
         int left = 0, sum = 0, min_len_so_far = INT_MAX, result = INT_MAX;
         
-        // Sliding window to find the subarrays
+        // Sliding window approach
         for (int right = 0; right < n; ++right) {
             sum += arr[right];
             
@@ -57,7 +57,7 @@ public:
                 min_len_so_far = min(min_len_so_far, current_len);
             }
             
-            // Update the min_len array
+          
             min_len[right] = min_len_so_far;
         }
         
