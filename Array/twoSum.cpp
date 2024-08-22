@@ -5,6 +5,8 @@
 #include <unordered_map>
 
 using namespace std;
+
+//method - 1
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
@@ -19,5 +21,22 @@ public:
     }
     return {};
         
+    }
+};
+
+//method - 2
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        int n = nums.size();
+        // Check all pairs
+        for (int i = 0; i < n; ++i) {
+            for (int j = i + 1; j < n; ++j) {
+                if (nums[i] + nums[j] == target) {
+                    return {i, j};  // Return the indices of the two numbers
+                }
+            }
+        }
+        return {};
     }
 };
