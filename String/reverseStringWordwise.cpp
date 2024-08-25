@@ -16,28 +16,6 @@ using namespace std;
 class Solution {
 public:
     string reverseWords(string s) {
-        // string result = "";
-        // vector<string> stack;
-
-        // for(size_t i = 0 ; i < s.length() ; i++)
-        // {
-        //     if(s[i] ==' ')
-        //     {
-        //         stack.push_back(result);
-        //         stack.push_back(" ");
-        //         result = "";
-        //     }
-        //     else{
-        //         result += s[i];
-        //     }
-        // }
-        // stack.push_back(result);
-
-        // for(int i = stack.size() - 1 ; i >= 0 ; --i)
-        // {
-        //     cout<<s[i];
-        // }
-
         string result = "";
         vector<string> stack;
         string temp = "";
