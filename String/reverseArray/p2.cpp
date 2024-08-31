@@ -3,12 +3,15 @@
 #include <string>
 using namespace std;
 
-string reverseString(string s){
+int main(){
+    string s;
+    cin>>s;
+
     string str;
     for(int i = 0 ; i < s.length() ; i++)
     {
         str = s[i] + str ;
     }
-    return str ;
+    cout<< str ;
 
 }
